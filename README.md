@@ -42,3 +42,7 @@ Step 5. Install the project dependencies
 Step 6. Start the server
 
 `$ flask run`
+
+Step 7. If installing new dependencies add them to requirements.txt and commit them to version control
+
+`$ pip freeze > requirements.txt`
