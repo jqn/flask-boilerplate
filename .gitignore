@@ -16,6 +16,7 @@ _mailinglist
 .idea/
 docs/_build/
 instance/
+migrations
 .vscode
 
 # Coverage reports
