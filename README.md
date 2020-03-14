@@ -72,7 +72,7 @@ Step 9. Create the first migration
 
 `$ flask db migrate`
 
-Step 10. Apply the migration to create the guest_users table in the databs
+Step 10. Apply the migration to create the guest_users table in the database
 
 `$ flask db upgrade`
 
@@ -89,3 +89,7 @@ Step 12. If installing new dependencies add them to requirements.txt and commit 
 ### Externally Visible Server
 
 `$ flask run --host=0.0.0.0`
+
+### Resources
+
+[Bootstrap Examples](https://github.com/twbs/bootstrap/tree/2a2b0b5abe7b44b519c9e19e8876b75608979dd0/site/content/docs/4.3/examples)
