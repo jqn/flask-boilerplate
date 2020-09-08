@@ -1,25 +1,32 @@
-from app.api import bp
+from . import api
 
-@bp.route('/users/<int:id>', methods=['GET'])
+
+@api.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
     pass
 
-@bp.route('/users', methods=['GET'])
-def get_users():
-    pass
 
-@bp.route('/users/<int:id>/followers', methods=['GET'])
+@api.route('/users', methods=['GET'])
+def get_users():
+    print("hello world")
+    return "Hello world"
+
+
+@api.route('/users/<int:id>/followers', methods=['GET'])
 def get_followers(id):
     pass
 
-@bp.route('/users/<int:id>/followed', methods=['GET'])
+
+@api.route('/users/<int:id>/followed', methods=['GET'])
 def get_followed(id):
     pass
 
-@bp.route('/users', methods=['POST'])
+
+@api.route('/users', methods=['POST'])
 def create_user():
     pass
 
-@bp.route('/users/<int:id>', methods=['PUT'])
+
+@api.route('/users/<int:id>', methods=['PUT'])
 def update_user(id):
     pass
