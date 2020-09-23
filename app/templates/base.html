@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ title }} | Reactor Labs</title>
+    <title>{{ title }} | MicroServices</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -26,7 +32,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="{{ url_for('home.homepage') }}"
-        >Reactor Labs</a
+        >Micro Services</a
       >
       <button
         class="navbar-toggler"
@@ -47,9 +53,9 @@
         <ul class="navbar-nav">
           {% if current_user.is_authenticated %}
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('home.dashboard') }}"
-              >Dashboard <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="{{ url_for('home.dashboard') }}">
+              Dashboard <span class="sr-only">(current)</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
@@ -59,7 +65,7 @@
               ><i class="fa fa-user"></i> Hi, {{ current_user.username }}!</a
             >
           </li>
-          {% else %}
+          {% else %} {#
           <li class="nav-item active">
             <a class="nav-link" href="{{ url_for('home.homepage') }}"
               >Home <span class="sr-only">(current)</span></a
@@ -73,13 +79,11 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
           </li>
-          {% endif %}
+          #} {% endif %}
         </ul>
       </div>
     </nav>
-    <div class="container">
-      {% block body %} {% endblock %}
-    </div>
+    <div class="container">{% block body %} {% endblock %}</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
